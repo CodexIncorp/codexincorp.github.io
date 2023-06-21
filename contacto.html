@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contacto | CODEX</title>
+    <link rel="icon" href="./img/codex-icon.png">
+    <link rel="stylesheet" href="./CSS/contacto.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="./index.html">
+                    <img class="img_logo" src="./img/logo-codex-completo-v2-transformed.png" alt="Logo CODEX"></a>
+            </div>
+            <ul class="links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li>
+                    <a href="#">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                        <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                    </ul>
+                </li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <div class="alternar_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <div class="mostrar_menu">
+            <ul class="menu">
+                <li><a class="m_links" href="./index.html">Inicio</a></li>
+                <li>
+                    <a class="m_links mas" href="#">Servicios<span><i class="icono fa fa-chevron-down"
+                                aria-hidden="true"></i></span></a>
+                    <ul class="submenu_2">
+                        <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                        <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                    </ul>
+                </li>
+                <li><a class="m_links" href="./nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="m_links">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <script>
+        const alternarBtn = document.querySelector('.alternar_btn')
+        const alternarBtnIcon = document.querySelector('.alternar_btn i')
+        const mostrarMenu = document.querySelector('.mostrar_menu')
+
+        alternarBtn.onclick = function () {
+            mostrarMenu.classList.toggle('open')
+            const isOpen = mostrarMenu.classList.contains('open')
+
+            alternarBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+    <script>
+        let listElements = document.querySelectorAll('.mas');
+        listElements.forEach(listElement => {
+            listElement.addEventListener('click', () => {
+                listElement.classList.toggle('ver');
+
+                let height = 0;
+                let menu = listElement.nextElementSibling;
+                if (menu.clientHeight == "0") {
+                    height = menu.scrollHeight;
+                }
+                menu.style.height = height + "px";
+
+            })
+        });
+    </script>
+
+    <div class="cuerpo">
+        <div class="c-form">
+            <div class="info">
+                <h1>CONTÁCTANOS</h1>
+                <p>¿Te gustaría saber más sobre nuestros servicios? ¿Tienes alguna duda o sugerencia que quieras
+                    compartir con nosotros? Si la respuesta es sí, estás en el lugar correcto. En está página podrás
+                    llenar el siguiente formulario con tus datos y tu mensaje. Te responderemos lo antes
+                    posible y te ofreceremos una solución a medida para tu proyecto web.
+                </p>
+                <a href="tel:961-123-4567"><i class="fa fa-phone"></i>961-204-0071</a>
+                <a href="mailto:codexcorporation97@gmail.com"><i
+                        class="fa fa-envelope"></i>codexcorporation97@gmail.com</a>
+                <a href="https://www.facebook.com/profile.php?id=100093505733751&mibextid=ZbWKwL"><i
+                        class="fa-brands fa-facebook"></i>Codex Corporation</a>
+                <a href="https://twitter.com/CodexCorpo3918"><i class="fa-brands fa-twitter"></i>@CodexCorpo3918</a>
+            </div>
+            <div class="form">
+                <form action="https://formsubmit.co/codexcorporation97@gmail.com" method="POST" autocomplete="off">
+                    <input type="text" name="name" placeholder="Nombre" class="campo" id="nombre" required>
+                    <input type="email" name="email" placeholder="Correo electrónico" class="campo" id="email" required>
+                    <textarea name="message" placeholder="Mensaje" id="message" required></textarea>
+                    <input type="submit" name="enviar" value="Enviar mensaje" class="btn-enviar">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/contacto.html">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pie_pagina">
+        <div class="grupo1">
+            <div class="box">
+                <figure><a href="./index.html"><img src="./img/logo-codex-completo-v2-transformed.png"
+                            alt="Logo CODEX"></a></figure>
+            </div>
+            <div class="box b_posicion">
+                <h2>ESTUDIO</h2>
+                <p>Avenida Quinta Norte Poniente 1615, 29000 Tuxtla Gutiérrez, Chiapas</p>
+            </div>
+            <div class="box b_posicion">
+                <h2>SERVICIOS</h2>
+                <ul>
+                    <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                    <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>ACERCA DE</h2>
+                <ul>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2023 <b>CODEX</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+</body>
+
+</html>

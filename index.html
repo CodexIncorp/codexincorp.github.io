@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CODEX</title>
+    <link rel="shortcut icon" href="./img/codex-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/estilos.css">
+    <meta name="theme-color" content="rgb(90, 122, 212)">
+    <meta name="title" content="CODEX">
+    <meta name="description" content="Especialistas en programación y diseño web">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="./index.html">
+                    <img class="img_logo" src="./img/logo-codex-completo-v2-transformed.png" alt="Logo CODEX"></a>
+            </div>
+            <ul class="links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li>
+                    <a href="#">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                        <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                    </ul>
+                </li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <div class="alternar_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <div class="mostrar_menu">
+            <ul class="menu">
+                <li><a class="m_links" href="./index.html">Inicio</a></li>
+                <li>
+                    <a class="m_links mas" href="#">Servicios<span><i class="icono fa fa-chevron-down"
+                                aria-hidden="true"></i></span></a>
+                    <ul class="submenu_2">
+                        <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                        <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                    </ul>
+                </li>
+                <li><a class="m_links" href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html" class="m_links">Contacto</a></li>
+            </ul>
+        </div>
+
+        <script>
+            const alternarBtn = document.querySelector('.alternar_btn')
+            const alternarBtnIcon = document.querySelector('.alternar_btn i')
+            const mostrarMenu = document.querySelector('.mostrar_menu')
+
+            alternarBtn.onclick = function () {
+                mostrarMenu.classList.toggle('open')
+                const isOpen = mostrarMenu.classList.contains('open')
+
+                alternarBtnIcon.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+            }
+        </script>
+        <script>
+            let listElements = document.querySelectorAll('.mas');
+            listElements.forEach(listElement => {
+                listElement.addEventListener('click', () => {
+                    listElement.classList.toggle('ver');
+
+                    let height = 0;
+                    let menu = listElement.nextElementSibling;
+                    if (menu.clientHeight == "0") {
+                        height = menu.scrollHeight;
+                    }
+                    menu.style.height = height + "px";
+
+                })
+            });
+        </script>
+    </header>
+
+    <section class="hero">
+        <div class="hero_container container">
+            <h1 class="hero_title">Unimos diseño y tecnología al servicio de tu PYME</h1>
+            <p class="hero_paragraph">¡No te quedes atrás! Consigue tu propio sitio web y haz crecer tu empresa</p>
+            <a href="./nosotros.html" class="cta">Conócenos</a>
+        </div>
+    </section>
+
+    <main>
+        <section class="container about">
+            <h2 class="subtitle">¡Gracias por estar aquí!</h2>
+            <p class="about_paragraph">En CODEX® nos preocupamos por contribuir profundamente al desarrollo de tu PYME,
+                para que alcances satisfactoriamente todas tus metas. Por eso, en todos nuestros trabajos estan
+                presentes tres ideales:
+            </p>
+
+            <div class="about_main">
+                <article class="about_icons">
+                    <img src="./img/SVG/bulb.svg" alt="Icono recompensa" class="about_icon">
+                    <h3 class="about_title">INNOVACIÓN</h3>
+                    <p class="about_paragraph">Nos esforzamos por crear proyectos adaptados a las nuevas tecnologías y a
+                        las venideras.
+                    </p>
+                </article>
+
+                <article class="about_icons">
+                    <img src="./img/SVG/award.svg" alt="Icono ideas" class="about_icon">
+                    <h3 class="about_title">COMPROMISO</h3>
+                    <p class="about_paragraph">Hacemos todo con pasión, con el fin de entregar el mejor trabajo, que
+                        cumpla y supere expectativas.
+                    </p>
+                </article>
+
+                <article class="about_icons">
+                    <img src="./img/SVG/design.svg" alt="Icono reloj" class="about_icon">
+                    <h3 class="about_title">DISEÑO</h3>
+                    <p class="about_paragraph">Creamos interfaces de usuario de gran atracción visual y pensando siempre
+                        en
+                        en la experiencia del mismo.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="knowledge">
+            <div class="knowledge_container container">
+                <div class="knowledge_texts">
+                    <h2 class="subtitle subtitle_knowledge">De nuestros proyectos: ENSIGNA®</h2>
+                    <p class="knowledge_paragraph">Si estás interesado en el área de la construcción, ENSIGNA® es para
+                        ti. Descubre consejos de seguridad para prevenir y mitigar riesgos durante obras de construcción
+                        acompañados de gráficos ideales para brindar una mejor experiencia y mayor comprensión de la
+                        información.
+                    </p>
+                    <a href="./servicios-lider-ensigna.html" class="cta cta_knowledge">Conoce más</a>
+                </div>
+                <figure class="knowledge_picture">
+                    <img src="./img/ini-ensigna.jpg" alt="Imagen seccion 2" class="knowledge_img">
+                </figure>
+            </div>
+        </section>
+
+        <section class="price container">
+            <h2 class="subtitle">¿Qué podemos hacer por tu PYME?</h2>
+
+            <div class="price_table">
+                <div class="price_element">
+                    <p class="price_name">Identidad digital</p>
+
+                    <div class="price_items">
+                        <p class="price_features">Creación de marca</p>
+                        <p class="price_features">Visibilidad en internet</p>
+                        <p class="price_features">Reputación online</p>
+                    </div>
+
+                    <a href="./servicios-desarrollo-web.html" class="price_cta">Conoce más</a>
+                </div>
+
+                <div class="price_element  price_element--best">
+                    <p class="price_name">Desarrollo a medida</p>
+
+                    <div class="price_items">
+                        <p class="price_features">Full stack</p>
+                        <p class="price_features">Diseño personalizado</p>
+                        <p class="price_features">Aplicaciones de alta concurrencia</p>
+                    </div>
+
+                    <a href="./servicios-desarrollo-web.html" class="price_cta">Conoce más</a>
+                </div>
+
+                <div class="price_element">
+                    <p class="price_name">Marketing digital</p>
+
+                    <div class="price_items">
+                        <p class="price_features">Contenido de marca</p>
+                        <p class="price_features">Social media marketing</p>
+                        <p class="price_features">Posicionamiento en buscadores</p>
+                    </div>
+
+                    <a href="./servicios-desarrollo-web.html" class="price_cta">Conoce más</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimony">
+            <div class="testimony_container container">
+                <img src="./img/SVG/left-arrow.svg" alt="Icono flecha izquierda" class="testimony_arrow" id="before">
+                <section class="testimony_body testimony_body--show" data-id="1">
+                    <div class="testimony_text">
+                        <h2 class="subtitle">Pablo Jiménez Montesinos<span class="testimony_course">Desarrollador
+                                web</span></h2>
+                        <p class="testimony_review">"<b>Estoy apasionado por la tecnología y la innovación.</b> Me
+                            dedico al
+                            desarrollo web desde hace más de 5 años, creando sitios web dinámicos, interactivos y
+                            responsivos para diferentes clientes y sectores, buscando siempre oportunidades para seguir
+                            creciendo."</p>
+                    </div>
+
+                    <figure class="testimony_picture">
+                        <img src="./img/carrusel/1.jpeg" alt="Pablo" class="testimony_img">
+                    </figure>
+                </section>
+
+                <section class="testimony_body" data-id="2">
+                    <div class="testimony_text">
+                        <h2 class="subtitle">Adrik Said Soancatl Niño<br><span class="testimony_course">Diseñador
+                                UX</span></h2>
+                        <p class="testimony_review">"<b>Me entusiasma crear experiencias de usuario memorables.</b>
+                            Me dedico al diseño UX desde hace más de 3 años, creando interfaces de usuario intuitivas,
+                            atractivas y funcionales para diferentes productos digitales."</p>
+                    </div>
+
+                    <figure class="testimony_picture">
+                        <img src="./img/carrusel/7.jpeg" alt="Adrik" class="testimony_img">
+                    </figure>
+                </section>
+
+                <section class="testimony_body" data-id="3">
+                    <div class="testimony_text">
+                        <h2 class="subtitle">María Fernanda Ramírez Pérez<br><span class="testimony_course">Diseñadora
+                                UI</span></h2>
+                        <p class="testimony_review">"<b>Me apasiona crear interfaces de usuario impactantes.</b>
+                            Me dedico al diseño UI desde hace más de 4 años, diseñando interfaces de usuario que
+                            combinan
+                            estética, funcionalidad y accesibilidad para diferentes productos digitales."</p>
+                    </div>
+
+                    <figure class="testimony_picture">
+                        <img src="./img/carrusel/2.jpeg" alt="María Fernanda" class="testimony_img">
+                    </figure>
+                </section>
+
+                <section class="testimony_body" data-id="4">
+                    <div class="testimony_text">
+                        <h2 class="subtitle">Derik Patricio Díaz Álvarez<span class="testimony_course">Programador
+                                backend</span></h2>
+                        <p class="testimony_review">"<b>Soy un entusiasta desarrollador de soluciones de software
+                                eficientes y
+                                escalables.</b>
+                            Me dedico al desarrollo backend desde hace más de 6 años, creando la lógica y la
+                            funcionalidad de diferentes productos digitales, como sitios web, aplicaciones móviles y
+                            sistemas de gestión".</p>
+                    </div>
+
+                    <figure class="testimony_picture">
+                        <img src="./img/carrusel/5.jpeg" alt="Derik" class="testimony_img">
+                    </figure>
+                </section>
+
+                <section class="testimony_body" data-id="5">
+                    <div class="testimony_text">
+                        <h2 class="subtitle">Mauricio Daniel Torres Rodríguez<span class="testimony_course">Programador
+                                frontend</span></h2>
+                        <p class="testimony_review">"<b>Soy un especialista en hacer interfaces de usuario atractivas y
+                                funcionales.</b>
+                            Me dedico al desarrollo frontend desde hace más de 4 años, creando la parte visual y la
+                            interacción de diferentes productos digitales, como sitios web, aplicaciones móviles y
+                            sistemas de gestión."</p>
+                    </div>
+
+                    <figure class="testimony_picture">
+                        <img src="./img/carrusel/4.jpeg" alt="Mauricio" class="testimony_img">
+                    </figure>
+                </section>
+
+                <section class="testimony_body" data-id="6">
+                    <div class="testimony_text">
+                        <h2 class="subtitle">Roberth Jared Gil Ríos<span class="testimony_course">Profesional de
+                                marketing digital</span></h2>
+                        <p class="testimony_review">"<b>Soy un experto creador de estrategias y campañas efectivas para
+                                diferentes negocios
+                                online.</b>
+                            Me dedico al marketing digital desde hace más de 5 años, creando y ejecutando planes de
+                            marketing online para diferentes clientes y medios empresariales."</p>
+                    </div>
+
+                    <figure class="testimony_picture">
+                        <img src="./img/carrusel/3.jpeg" alt="Brayan" class="testimony_img">
+                    </figure>
+                </section>
+
+                <section class="testimony_body" data-id="7">
+                    <div class="testimony_text">
+                        <h2 class="subtitle">Brayan Fernando de la Cruz Montoya<br><span
+                                class="testimony_course">Copywriter</span>
+                        </h2>
+                        <p class="testimony_review">"<b>Disfruto crear textos persuasivos y originales para diferentes
+                                medios y fines.</b>
+                            Me dedico al copywriting desde hace más de 4 años, creando textos que captan la atención,
+                            generan interés y provocan acción en el público objetivo."</p>
+                    </div>
+
+                    <figure class="testimony_picture">
+                        <img src="./img/carrusel/6.jpeg" alt="Roberth" class="testimony_img">
+                    </figure>
+                </section>
+                <img src="./img/SVG/right-arrow.svg" alt="Icono flecha derecha" class="testimony_arrow" id="next">
+            </div>
+        </section>
+
+        <section class="questions container">
+            <section class="questions_offer">
+                <h2 class="subtitle">¿Estás listo?</h2>
+                <p class="questions_copy">¿Quieres tener un sitio web profesional, atractivo y funcional? Contáctanos
+                    para solicitar un presupuesto, una consulta o una demostración. Te
+                    responderemos enseguida.<br><br><b style="font-size: 19px;">¡Comienza a diseñar tu presencia en la web!</b></p>
+                <a href="./contacto.html" class="questions_cta cta">¡Vamos!</a>
+            </section>
+        </section>
+    </main>
+
+    <footer class="pie_pagina">
+        <div class="grupo1">
+            <div class="box">
+                <figure><a href="./index.html"><img src="./img/logo-codex-completo-v2-transformed.png"
+                            alt="Logo CODEX"></a></figure>
+            </div>
+            <div class="box b_posicion">
+                <h2>ESTUDIO</h2>
+                <p>Avenida Quinta Norte Poniente 1615, 29000 Tuxtla Gutiérrez, Chiapas</p>
+            </div>
+            <div class="box b_posicion">
+                <h2>SERVICIOS</h2>
+                <ul>
+                    <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                    <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>ACERCA DE</h2>
+                <ul>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2023 <b>CODEX</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+
+    <script src="./JS/slider.js"></script>
+</body>
+
+</html>

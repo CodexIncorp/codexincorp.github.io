@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Servicios | CODEX</title>
+    <link rel="shortcut icon" href="./img/codex-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/contacto.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="./index.html">
+                    <img class="img_logo" src="./img/logo-codex-completo-v2-transformed.png" alt="Logo CODEX"></a>
+            </div>
+            <ul class="links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li>
+                    <a href="#">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                        <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                    </ul>
+                </li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <div class="alternar_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <div class="mostrar_menu">
+            <ul class="menu">
+                <li><a class="m_links" href="./index.html">Inicio</a></li>
+                <li>
+                    <a class="m_links mas" href="#">Servicios<span><i class="icono fa fa-chevron-down"
+                                aria-hidden="true"></i></span></a>
+                    <ul class="submenu_2">
+                        <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                        <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                    </ul>
+                </li>
+                <li><a class="m_links" href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html" class="m_links">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <script>
+        const alternarBtn = document.querySelector('.alternar_btn')
+        const alternarBtnIcon = document.querySelector('.alternar_btn i')
+        const mostrarMenu = document.querySelector('.mostrar_menu')
+
+        alternarBtn.onclick = function () {
+            mostrarMenu.classList.toggle('open')
+            const isOpen = mostrarMenu.classList.contains('open')
+
+            alternarBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+    <script>
+        let listElements = document.querySelectorAll('.mas');
+        listElements.forEach(listElement => {
+            listElement.addEventListener('click', () => {
+                listElement.classList.toggle('ver');
+
+                let height = 0;
+                let menu = listElement.nextElementSibling;
+                if (menu.clientHeight == "0") {
+                    height = menu.scrollHeight;
+                }
+                menu.style.height = height + "px";
+
+            })
+        });
+    </script>
+
+    <div class="container-father">
+        <div class="container-history">
+            <div class="container-title">
+                <h1>Reserva un espacio para ti en la web</h1>
+                <p>Te ofrecemos sitios web de calidad, a tu medida y a buen precio.<br>Somos tu mejor opción para crear
+                    tu
+                    presencia online.</p>
+                <a href="#content" class="btn-history">Descúbrelo</a>
+            </div>
+            <img src="./img/web.jpg" alt="Web">
+        </div>
+    </div>
+
+    <section class="content sau">
+        <h2 id="content">Creamos un lugar para ti en internet</h2>
+        <p>En CODEX® queremos que tengas un lugar especialmente diseñado para ti en internet, donde puedas mostrar tu   marca, tus
+            productos o servicios, y conectar con tu público objetivo. Por eso, te ofrecemos un servicio integral de
+            diseño y desarrollo de páginas web a medida, que se adapten a tu imagen, a tus necesidades y a tus metas.
+            Somos una empresa con amplia experiencia y conocimiento en el sector, que cuenta con un equipo de
+            profesionales cualificados y creativos, que te guiarán y apoyarán en cada paso del proyecto, desde el
+            análisis inicial hasta el lanzamiento y el seguimiento de tu página web.  
+            <br><br>No importa el tamaño o el sector de
+            tu empresa, tenemos una solución para ti:
+        </p>
+
+        <div class="box-container">
+            <div class="box-card">
+                <i class="fa-solid fa-house-laptop"></i>
+                <h3>Aplicaciones web personalizadas</h3>
+                <p>Creamos aplicaciones web a medida, que se ajustan a las necesidades y objetivos de cada cliente. Utilizamos las mejores herramientas, tecnologías y marcos para garantizar la calidad, la funcionalidad y la escalabilidad de las aplicaciones.</p>
+            </div>
+            <div class="box-card">
+                <i class="fa-solid fa-pen-ruler"></i>
+                <h3>Diseño web</h3>
+                <p>Diseñamos sitios web atractivos, funcionales y responsivos, que mejoran la experiencia de usuario y el posicionamiento SEO. Nos basamos en las últimas tendencias y buenas prácticas de diseño web, y nos adaptamos a la imagen y al público de cada cliente.</p>
+            </div>
+            <div class="box-card">
+                <i class="fa-solid fa-gears"></i>
+                <h3>Mantenimiento, monitoreo y soporte</h3>
+                <p>Realizamos pruebas y depuración, actualizaciones y mantenimiento de protocolos de seguridad, mantenimiento de bases de datos y mucho más, con tal de asegurar el rendimiento óptimo, la seguridad y la actualización de los sitios web y aplicaciones web que desarrollamos
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="questions container">
+        <section class="questions_offer">
+            <h2 class="subtitle">¡Empieza ahora!</h2>
+            <p class="questions_copy">No dejes pasar esta oportunidad de tener tu propio sitio web y destacarte de la
+                competencia. Contáctanos hoy mismo y reserva tu espacio en la web.
+            </p>
+            <a href="./contacto.html" class="questions_cta cta">¡Vamos!</a>
+        </section>
+    </section>
+
+    <footer class="pie_pagina">
+        <div class="grupo1">
+            <div class="box">
+                <figure><a href="./index.html"><img src="./img/logo-codex-completo-v2-transformed.png"
+                            alt="Logo CODEX"></a></figure>
+            </div>
+            <div class="box b_posicion">
+                <h2>UBICACIÓN</h2>
+                <p>Avenida Quinta Norte Poniente 1615, 29000 Tuxtla Gutiérrez, Chiapas</p>
+            </div>
+            <div class="box b_posicion">
+                <h2>SERVICIOS</h2>
+                <ul>
+                    <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                    <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>ACERCA DE</h2>
+                <ul>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2023 <b>CODEX</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+</body>
+
+</html>

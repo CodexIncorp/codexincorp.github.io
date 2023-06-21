@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Servicios | CODEX</title>
+    <link rel="shortcut icon" href="./img/codex-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/contacto.css">
+    <link rel="stylesheet" href="./CSS/ensigna.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="./index.html">
+                    <img class="img_logo" src="./img/logo-codex-completo-v2-transformed.png" alt="Logo CODEX"></a>
+            </div>
+            <ul class="links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li>
+                    <a href="#">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                        <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                    </ul>
+                </li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <div class="alternar_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <div class="mostrar_menu">
+            <ul class="menu">
+                <li><a class="m_links" href="./index.html">Inicio</a></li>
+                <li>
+                    <a class="m_links mas" href="#">Servicios<span><i class="icono fa fa-chevron-down"
+                                aria-hidden="true"></i></span></a>
+                    <ul class="submenu_2">
+                        <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                        <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                    </ul>
+                </li>
+                <li><a class="m_links" href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html" class="m_links">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <script>
+        const alternarBtn = document.querySelector('.alternar_btn')
+        const alternarBtnIcon = document.querySelector('.alternar_btn i')
+        const mostrarMenu = document.querySelector('.mostrar_menu')
+
+        alternarBtn.onclick = function () {
+            mostrarMenu.classList.toggle('open')
+            const isOpen = mostrarMenu.classList.contains('open')
+
+            alternarBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+    <script>
+        let listElements = document.querySelectorAll('.mas');
+        listElements.forEach(listElement => {
+            listElement.addEventListener('click', () => {
+                listElement.classList.toggle('ver');
+
+                let height = 0;
+                let menu = listElement.nextElementSibling;
+                if (menu.clientHeight == "0") {
+                    height = menu.scrollHeight;
+                }
+                menu.style.height = height + "px";
+
+            })
+        });
+    </script>
+
+    <div class="container-father">
+        <div class="container-history">
+            <div class="container-title">
+                <h1>Una solución para los empleados: ENSIGNA®</h1>
+                <p>Consejos de seuguridad y prevención de riesgos para los trabajadores de la construcción</p>
+                <a href="#content" class="btn-history">Descúbrelo</a>
+            </div>
+            <img src="./img/ensigna.jpg" alt="Herramientas de carpintería">
+        </div>
+    </div>
+
+    <section class="content sau">
+        <div class="sec1">
+            <h2 id="content">¿Qué es ENSIGNA®?</h2>
+            <img src="./img/ensigna/1e.png" alt="ENSIGNA® página">
+            <p>ENSIGNA® es una solución innovadora desarrollada por nosostros, líder en el mercado de aplicaciones para el sector de la construcción. ENSIGNA® es una plataforma integral que ofrece a los trabajadores y gestores de obras de construcción acceso a recursos, herramientas y asesoramiento para prevenir y gestionar los riesgos laborales. <br><br>Con ENSIGNA®, podrás consultar la normativa vigente en materia de seguridad, seguir los protocolos adecuados en caso de emergencia, utilizar los equipos de protección más adecuados y aprender las mejores prácticas para evitar accidentes. ENSIGNA® es la aplicación que garantiza trabajar de forma segura y eficiente en el sector de la construcción.
+            </p>
+        </div>
+
+        <div class="sec2">
+            <h2 id="content">¿Qué encontrarás?</h2>
+            <p>ENSIGNA® te ofrece diferentes secciones, como: </p>
+
+            <div class="descripciones">
+                <div class="descripcion">
+                    <div class="descripcion-texto">
+                        <div class="descripcion-titulo">
+                            <h4>Tipos de riesgos</h4>
+                        </div>
+                        <p>Aprenderás sobre los principales riesgos que se presentan en las obras de construcción, como caídas, golpes, cortes, quemaduras, electrocución, exposición a ruidos, polvo o sustancias químicas, entre otros</p>
+                    </div>
+
+                    <div class="descripcion-img">
+                        <img src="./img/ensigna/2e.png" alt="Ensigna 2">
+                    </div>
+                </div>
+                
+                <div class="descripcion">
+                    <div class="descripcion-texto">
+                        <div class="descripcion-titulo">
+                            <h4>Responsabilidades de los trabajadores</h4>
+                        </div>
+                        <p>Conocerás las responsabilidades que tiene un trabajador para garantizar la seguridad y la salud en el trabajo, como cumplir con las normas, usar los equipos adecuados, reportar las incidencias, participar en la capacitación, etc.</p>
+                    </div>
+                    
+                    <div class="descripcion-img">
+                        <img src="./img/ensigna/e3.png" alt="Ensigna 3">
+                    </div>
+                </div>
+                
+                <div class="descripcion">
+                    <div class="descripcion-texto">
+                        <div class="descripcion-titulo">
+                            <h4>Responsabilidades del patrón</h4>
+                        </div>
+                        <p>Encontrarás las responsabilidades que tiene el patrón para garantizar la seguridad y la salud en el trabajo, como proporcionar las condiciones adecuadas, dotar de los equipos necesarios, supervisar el cumplimiento, capacitar al personal, etc.</p>
+                    </div>
+
+                    <div class="descripcion-img">
+                        <img src="./img/ensigna/e4.png" alt="Ensigna 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="questions container">
+        <section class="questions_offer">
+            <h2 class="subtitle">¡Ten tu propio sitio!</h2>
+            <p class="questions_copy">¿Te gusta que ves? ¿Quieres tener tu propio sitio web profesional, atractivo y funcional? Contacta con nosotros y te ayudaremos a crearlo. <br><b>¡No te arrepentirás!</b>
+            </p>
+            <a href="./contacto.html" class="questions_cta cta">¡Vamos!</a>
+        </section>
+    </section>
+
+    <footer class="pie_pagina">
+        <div class="grupo1">
+            <div class="box">
+                <figure><a href="./index.html"><img src="./img/logo-codex-completo-v2-transformed.png"
+                            alt="Logo CODEX"></a></figure>
+            </div>
+            <div class="box b_posicion">
+                <h2>UBICACIÓN</h2>
+                <p>Avenida Quinta Norte Poniente 1615, 29000 Tuxtla Gutiérrez, Chiapas</p>
+            </div>
+            <div class="box b_posicion">
+                <h2>SERVICIOS</h2>
+                <ul>
+                    <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                    <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>ACERCA DE</h2>
+                <ul>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2023 <b>CODEX</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+</body>
+
+</html>

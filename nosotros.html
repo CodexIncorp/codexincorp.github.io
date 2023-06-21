@@ -1,0 +1,193 @@
+<!DOCTYPE html> <html lang="es">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Nosotros | CODEX</title>
+	<link rel="icon" href="./img/codex-icon.png">
+    <link rel="stylesheet" href="./CSS/contacto.css">
+    <link rel="stylesheet" href="./CSS/nosotros.css">
+</head>
+
+<body">
+	<header>
+        <nav class="navbar">
+            <div class="logo"><a href="./index.html">
+                <img class="img_logo" src="./img/logo-codex-completo-v2-transformed.png" alt="Logo CODEX"></a>
+            </div>
+            <ul class="links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li>
+                    <a href="#">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                        <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                    </ul>
+                </li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <div class="alternar_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <div class="mostrar_menu">
+            <ul class="menu">
+                <li><a class="m_links" href="./index.html">Inicio</a></li>
+                <li>
+                    <a class="m_links mas" href="#">Servicios<span><i class="icono fa fa-chevron-down" aria-hidden="true"></i></span></a>
+                    <ul class="submenu_2">
+                        <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                        <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                    </ul>
+                </li>
+                <li><a class="m_links" href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./contacto.html" class="m_links">Contacto</a></li>
+            </ul>
+        </div>
+	</header>
+
+	<script>
+		const alternarBtn=document.querySelector('.alternar_btn')
+		const alternarBtnIcon=document.querySelector('.alternar_btn i')
+		const mostrarMenu=document.querySelector('.mostrar_menu')
+
+		alternarBtn.onclick = function(){
+			mostrarMenu.classList.toggle('open')
+			const isOpen = mostrarMenu.classList.contains('open')
+			
+			alternarBtnIcon.classList = isOpen
+				?'fa-solid fa-xmark'
+				:'fa-solid fa-bars'
+		}
+	</script>
+	<script>
+		let listElements = document.querySelectorAll('.mas');
+		listElements.forEach(listElement => {
+			listElement.addEventListener('click', ()=>{
+				listElement.classList.toggle('ver');
+
+				let height = 0;
+				let menu = listElement.nextElementSibling;
+				if(menu.clientHeight == "0"){
+					height = menu.scrollHeight;
+				}
+				menu.style.height = height+"px";
+
+			})
+		});
+	</script>
+
+    <div class="contenido_header">
+        <div class="contenedor_encabezado">
+            <video autoplay controls>
+                <source src="./videos/spot-large.mp4">
+                <source src="./videos/spot-large-mov.mov">
+            </video>
+        </div>
+    </div>
+
+	<div class="cuerpo">
+		<h1>¿QUIÉNES SOMOS?</h1>
+		<h3>MISION</h3>
+        <img src="./img/nos2.jpg" alt="Mision" class="mision">
+		<p>Brindar soluciones tecnológicas innovadoras y de calidad a nuestros 
+            clientes a través del desarrollo de software y servicios de programación. Nos esforzamos por 
+            ofrecer productos y servicios que cumplan con los estándares más altos de eficiencia, 
+            funcionalidad y seguridad. <br><br>Además, buscamos promover la colaboración y el crecimiento tanto 
+            dentro de nuestra empresa como en el ecosistema de desarrollo de software en general, 
+            fomentando la creatividad, el aprendizaje continuo y la excelencia en nuestro trabajo. Nuestro 
+            objetivo final es contribuir al progreso tecnológico y facilitar el éxito de nuestros clientes en sus 
+            respectivos campos de negocio</p><br>
+		<h3>VISION</h3>
+        <img src="./img/nos1.jpg" alt="Vision" class="vision">
+		<p>Convertirnos en líderes reconocidos en el ámbito de la programación y el 
+            desarrollo de software, destacando por nuestra innovación, excelencia técnica y capacidad 
+            para resolver problemas complejos. Nos esforzamos por ser una referencia en la industria, 
+            siendo reconocidos por nuestra capacidad para adaptarnos a los avances tecnológicos y 
+            anticiparnos a las necesidades emergentes del mercado. <br><br>Queremos ser la opción preferida de 
+            nuestros clientes, colaborando con ellos para transformar sus ideas en soluciones digitales 
+            exitosas y de vanguardia. Aspiramos a crear un ambiente de trabajo estimulante y de 
+            colaboración, donde los talentos más destacados puedan desarrollarse plenamente y donde 
+            se promueva la diversidad, la inclusión y la sostenibilidad en todas nuestras operaciones. En 
+            definitiva, buscamos dejar una huella positiva en la sociedad y contribuir al progreso 
+            tecnológico en beneficio de todos.</p><br>
+		<h3>NUESTROS VALORES</h3>
+		<div class="about_main">
+            <article class="about_icons blue">
+                <i class="fa-solid fa-shuffle about_icon white"></i>
+                <h3 class="about_title">FLEXIBILIDAD</h3>
+                <p class="about_paragraph">Nos adaptamos a los cambios y a las demandas del mercado, ofreciendo soluciones web a medida, personalizadas y versátiles, que se ajusten a las necesidades de cada cliente.
+                </p>
+            </article>
+
+            <article class="about_icons red">
+                <i class="fa-solid fa-lightbulb about_icon white"></i>
+                <h3 class="about_title">CREATIVIDAD</h3>
+                <p class="about_paragraph">Fomentamos la expresión de ideas y propuestas originales y diferenciadoras, que aporten valor añadido a nuestros proyectos web.
+                </p>
+            </article>
+
+            <article class="about_icons red_title">
+                <i class="fa-solid fa-check-to-slot about_icon red-icon"></i>
+                <h3 class="about_title">CALIDAD</h3>
+                <p class="about_paragraph">Garantizamos la excelencia y el funcionamiento de nuestros productos web, cumpliendo con los estándares de calidad y seguridad establecidos.
+                </p>
+            </article>
+
+            <article class="about_icons blue_title">
+                <i class="fa-solid fa-people-group about_icon blue-icon"></i>
+                <h3 class="about_title">COLABORACIÓN</h3>
+                <p class="about_paragraph">Trabajamos en equipo, compartiendo conocimientos y experiencias, y estableciendo alianzas estratégicas con otros profesionales y empresas del sector web.
+                </p>
+            </article>
+
+            <article class="about_icons blue">
+                <i class="fa-solid fa-handshake about_icon white"></i>
+                <h3 class="about_title">REPONSABILIDAD</h3>
+                <p class="about_paragraph">Actuamos con ética y respeto, tanto con nuestros clientes como con el medio ambiente y la sociedad, contribuyendo al desarrollo sostenible y social.
+                </p>
+            </article>
+
+            <article class="about_icons red">
+                <i class="fa-solid fa-people-arrows about_icon white"></i>
+                <h3 class="about_title">TRANSPARENCIA</h3>
+                <p class="about_paragraph"> Mantenemos una comunicación fluida y honesta con nuestros clientes, informándoles en todo momento del estado y el avance de sus proyectos web.
+                </p>
+            </article>
+        </div>
+	</div>	
+
+    <footer class="pie_pagina">
+        <div class="grupo1">
+            <div class="box">
+                <figure><a href="./index.html"><img src="./img/logo-codex-completo-v2-transformed.png"
+                            alt="Logo CODEX"></a></figure>
+            </div>
+            <div class="box b_posicion">
+                <h2>ESTUDIO</h2>
+                <p>Avenida Quinta Norte Poniente 1615, 29000 Tuxtla Gutiérrez, Chiapas</p>
+            </div>
+            <div class="box b_posicion">
+                <h2>SERVICIOS</h2>
+                <ul>
+                    <li><a href="./servicios-desarrollo-web.html">Desarrollo Web</a></li>
+                    <li><a href="./servicios-lider-ensigna.html">ENSIGNA®</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>ACERCA DE</h2>
+                <ul>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2023 <b>CODEX</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+</body>
+</html>
